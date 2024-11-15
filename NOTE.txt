@@ -1,0 +1,37 @@
+PS C:\mini_clip_test> escript C:\mini_clip_test\rebar3 new release my_game
+===> Writing my_game/apps/my_game/src/my_game_app.erl
+===> Writing my_game/apps/my_game/src/my_game_sup.erl
+===> Writing my_game/apps/my_game/src/my_game.app.src
+===> Writing my_game/rebar.config
+===> Writing my_game/config/sys.config
+===> Writing my_game/config/vm.args
+===> Writing my_game/.gitignore
+===> Writing my_game/LICENSE.md
+===> Writing my_game/README.md
+PS C:\mini_clip_test> cd my_game
+PS C:\mini_clip_test\my_game> escript C:\mini_clip_test\rebar3 compile
+===> Verifying dependencies...
+===> Analyzing applications...
+===> Compiling my_game
+PS C:\mini_clip_test\my_game> escript C:\mini_clip_test\rebar3 release
+===> Verifying dependencies...
+===> Analyzing applications...
+===> Compiling my_game
+===> Assembling release my_game-0.1.0...
+===> Release successfully assembled: _build/default/rel/my_game
+PS C:\mini_clip_test\my_game>
+
+DEVO ESEGUIRE rebar3 stando dentro la cartella my_game!!!
+
+
+PS C:\mini_clip_test\my_game> erl -pa _build/default/lib/my_game/ebin
+>>
+Erlang/OTP 27 [erts-15.1.2] [source] [64-bit] [smp:20:20] [ds:20:20:10] [async-threads:1] [jit:ns]
+
+Eshell V15.1.2 (press Ctrl+G to abort, type help(). for help)
+1> application:start(my_game).
+ok
+2>
+
+
+COME ADMIN POWERSHELL PER ESEGUIRE LA APP
